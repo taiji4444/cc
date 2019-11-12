@@ -32,6 +32,6 @@ let i=0
 for disk in `cat disk.list`
 do 
 	echo "$disk ${list[i]}"
-#	mkfs_mount.sh $disk ${list[i]}
+  mkfs_mount.sh $disk ${list[i]}
 	i=$i+1
 done

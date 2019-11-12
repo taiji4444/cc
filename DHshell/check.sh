@@ -1,8 +1,7 @@
 #!/bin/bash
-aa=$(readlink -f $0)
-cd $(dirname $aa)
 pingTest()
 {
+#cat /home/check_tools/allIp.txt  | while read all_dn_ip
 cat $1  | while read dn_ip
 do
     /bin/ping -c 10 -w 10 $dn_ip > /tmp/$dn_ip &
