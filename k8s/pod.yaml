@@ -1,0 +1,11 @@
+apiVersion: V1
+kind: Pod
+metadata:
+  name: pod-flag
+  labels:
+    security: "S1"
+    app: "nginx"
+spec:
+  containers:
+    - name: nginx
+      image: nginx

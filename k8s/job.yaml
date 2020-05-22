@@ -1,0 +1,18 @@
+apiVerion: batch/V1
+kind: Job
+metadata:
+  name: process-item-$ITEM
+  labels:
+    jobgroup: jobexample
+  spec:
+    template:
+      metadata:
+        name: jobexample
+        labels:
+          jobgroup: jobexample
+      spec:
+        containers:
+          - name: C
+            image: buybox
+            command: ["sh","-C","echo process item $ITEM & sleep 5" ]
+        restartPolicy: Never
