@@ -20,12 +20,8 @@
 # for i in range(10):
 #     print(i.bit_length())
 # 格式化
-import socket
-sk=socket.socket()
-sk.connect(('10.8.72.6',8801))
-
-while True:
-    inp=input(">>>>")
-    sk.sendall(bytes(inp,"utf8"))
-    data=sk.recv(1024)
-    print(str(data,'utf8'))
+test = 'i am {name},i age {age}'
+# v = test.format(name = 'zj',age=36)
+v = test.format_map({"name":'zj','age':22})
+print(v)
+int
